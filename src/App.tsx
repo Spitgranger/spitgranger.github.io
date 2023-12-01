@@ -1,17 +1,13 @@
 import {useState} from 'react'
 import './App.css'
+import Header from "./Components/Header.tsx";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
       <>
-        <div className="flex items-baseline space-x-4 ">
-          <h1>Richard</h1>
-          <h2 className="">About</h2>
-          <h2 className="">Experiences</h2>
-          <h2 className="">Projects</h2>
-        </div>
+        <Header />
         <h1>Vite + React</h1>
         <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>
