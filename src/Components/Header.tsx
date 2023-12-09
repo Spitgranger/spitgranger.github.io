@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import useThemeSwitcher from "../hooks/useDarkMode.ts";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
-  const [activeTheme, setTheme] = useState('light');
+  const [activeTheme, setTheme] = useThemeSwitcher();
 
   function toggleMenu() {
     if (!showMenu) {
