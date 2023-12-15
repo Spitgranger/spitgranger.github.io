@@ -20,10 +20,10 @@ function Header() {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             id="nav"
-            className="sm:container sm:mx-auto"
+            className="container sm:mx-auto"
         >
             <div
-                className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
+                className="z-10 max-w-screen-lg xl:max-w-screen-2xl block sm:flex sm:justify-between sm:items-center py-3">
                 {/* Header menu links and small screen hamburger menu */}
                 <div className="flex justify-between items-center px-4 sm:px-0">
                     <div>

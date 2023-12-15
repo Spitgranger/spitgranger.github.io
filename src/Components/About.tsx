@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import {FiArrowDownCircle} from "react-icons/fi";
 import useThemeSwitcher from "../hooks/useDarkMode.ts";
-import developerLight from "../images/developer.svg";
+import developerLight from "../images/programming.svg";
 import developerDark from "../images/developer-dark.svg";
 
 function About() {
@@ -69,6 +69,7 @@ function About() {
                         activeTheme === 'dark' ? developerLight : developerDark
                     }
                     alt="Developer Pic"
+                    className="float-right"
                 />
             </motion.div>
         </motion.section>
