@@ -2,6 +2,7 @@ import './App.css'
 import Header from "./Components/Header.tsx";
 import About from "./Components/About.tsx";
 import {AnimatePresence} from "framer-motion";
+import UseScrollToTop from "./hooks/useScrollToTop.tsx";
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
         <Header/>
         <div className="container mx-auto">
           <About />
+            <UseScrollToTop/>
         </div>
       </AnimatePresence>
   )
