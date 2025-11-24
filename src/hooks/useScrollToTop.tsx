@@ -1,5 +1,5 @@
-import {useState, useEffect} from 'react';
-import {FiChevronUp} from "react-icons/fi";
+import { useState, useEffect } from 'react';
+import { FiChevronUp } from "react-icons/fi";
 
 const useScrollToTop = () => {
     const [showScroll, setShowScroll] = useState(false);
@@ -12,9 +12,9 @@ const useScrollToTop = () => {
     });
 
     const scrollToTop = () => {
-        if (!showScroll && window.pageYOffset > 400) {
+        if (!showScroll && window.scrollY > 400) {
             setShowScroll(true);
-        } else if (showScroll && window.pageYOffset <= 400) {
+        } else if (showScroll && window.scrollY <= 400) {
             setShowScroll(false);
         }
     }

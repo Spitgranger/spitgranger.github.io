@@ -15,6 +15,14 @@ function Header() {
         }
     }
 
+    function scrollToSection(sectionId: string) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setShowMenu(false);
+    }
+
     return (
         <motion.nav
             initial={{opacity: 0}}
@@ -27,7 +35,7 @@ function Header() {
                 {/* Header menu links and small screen hamburger menu */}
                 <div className="flex justify-between items-center px-4 sm:px-0">
                     <div>
-                        <h1 className="text-6xl font-bold">
+                        <h1 className="text-6xl font-bold text-primary-dark dark:text-primary-light">
                             Richard
                         </h1>
                     </div>
@@ -77,32 +85,36 @@ function Header() {
                             : 'hidden'
                     }
                 >
-                    <h1
-                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+                    <button
+                        onClick={() => scrollToSection('projects')}
+                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-400 sm:mx-4 mb-2 sm:py-2 cursor-pointer transition-colors"
                         aria-label="Projects"
                     >
                         Projects
-                    </h1>
-                    <h1
-                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+                    </button>
+                    <button
+                        onClick={() => scrollToSection('about')}
+                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-400 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark cursor-pointer transition-colors"
                         aria-label="About Me"
                     >
                         About Me
-                    </h1>
-                    <h1
-                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+                    </button>
+                    <button
+                        onClick={() => scrollToSection('contact')}
+                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-400 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark cursor-pointer transition-colors"
                         aria-label="Contact"
                     >
                         Contact
-                    </h1>
+                    </button>
                     <div
                         className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
                         <a
                             href="https://github.com/Spitgranger"
                             target="_blank"
-                            className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
+                            className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300"
                             aria-label="Github Button"
                         >
+                            My Github!
                         </a>
                     </div>
                 </div>
@@ -110,24 +122,27 @@ function Header() {
                 {/* Header links large screen */}
                 <div
                     className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-                    <h1
-                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+                    <button
+                        onClick={() => scrollToSection('projects')}
+                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-400 sm:mx-4 mb-2 sm:py-2 cursor-pointer transition-colors"
                         aria-label="Projects"
                     >
                         Projects
-                    </h1>
-                    <h1
-                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+                    </button>
+                    <button
+                        onClick={() => scrollToSection('about')}
+                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-400 sm:mx-4 mb-2 sm:py-2 cursor-pointer transition-colors"
                         aria-label="About Me"
                     >
                         About Me
-                    </h1>
-                    <h1
-                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+                    </button>
+                    <button
+                        onClick={() => scrollToSection('contact')}
+                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-400 sm:mx-4 mb-2 sm:py-2 cursor-pointer transition-colors"
                         aria-label="Contact"
                     >
                         Contact
-                    </h1>
+                    </button>
                 </div>
 
                 {/* Header right section buttons */}

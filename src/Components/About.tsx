@@ -1,5 +1,5 @@
-import {motion} from "framer-motion";
-import {FiArrowDownCircle} from "react-icons/fi";
+import { motion } from "framer-motion";
+import { FiArrowDownCircle } from "react-icons/fi";
 import useThemeSwitcher from "../hooks/useDarkMode.ts";
 import developerLight from "../images/programming.svg";
 import developerDark from "../images/developer-dark.svg";
@@ -7,11 +7,11 @@ import developerDark from "../images/developer-dark.svg";
 function About() {
     const [activeTheme] = useThemeSwitcher();
     return (
-        <motion.section className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md-mt-2">
+        <motion.section className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-16 py-12">
             <div className="w-full md:w-1/3 text-left">
                 <motion.h1
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{
                         ease: 'easeInOut',
                         duration: 1,
@@ -22,8 +22,8 @@ function About() {
                     Hey Its Richard!
                 </motion.h1>
                 <motion.p
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{
                         ease: 'easeInOut',
                         duration: 1,
@@ -35,8 +35,8 @@ function About() {
                     I'm a 4th year student at McMaster University studying software engineering.
                 </motion.p>
                 <motion.div
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{
                         ease: 'easeInOut',
                         duration: 0.9,
@@ -44,7 +44,7 @@ function About() {
                     }}
                     className="flex justify-center sm:block"
                 >
-                    <a
+                    {/* <a
                         download="richard_fan_resume.pdf"
                         href="/files/richard_fan_resume.pdf"
                         className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-full bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
@@ -55,13 +55,13 @@ function About() {
                         <span className="text-sm sm:text-lg font-general-medium duration-100">
 							My Resume
 						</span>
-                    </a>
+                    </a> */}
                 </motion.div>
             </div>
             <motion.div
-                initial={{opacity: 0, y: -180}}
-                animate={{opacity: 1, y: 0}}
-                transition={{ease: 'easeInOut', duration: 0.9, delay: 0.2}}
+                initial={{ opacity: 0, y: -180 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
                 className="sm:w-2/3 text-right float-right mt-8 sm:mt-0"
             >
                 <img
@@ -69,7 +69,7 @@ function About() {
                         activeTheme === 'dark' ? developerLight : developerDark
                     }
                     alt="Developer Pic"
-                    className="float-right" 
+                    className="float-right"
                 />
             </motion.div>
         </motion.section>
