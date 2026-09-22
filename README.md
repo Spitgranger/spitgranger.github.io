@@ -1,19 +1,26 @@
-# Richard's Personal Website 1st Iteration 
+# Richard Fan — Personal website
 
-First iteration of my personal website. Built using Typescript + React and Tailwind CSS
+A responsive React and TypeScript portfolio with light/dark themes, filterable projects, and personal project notes.
 
-## Starting the development server 
+## Development
 
-Install dependencies
-
-```shell
-yarn 
-```
-Start the development server
-```shell
-yarn run dev
+```sh
+yarn install
+yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Checks and production build
+
+```sh
+yarn lint
+yarn build
+yarn preview
+```
+
+## Updating the content
+
+- `src/Components/About.tsx`: personal introduction.
+- `src/Components/Projects.tsx`: selected repositories, descriptions, and filters.
+- `src/App.tsx`: page structure.
+- `src/Components/Contact.tsx`: email, GitHub, and LinkedIn links.
+- `src/index.css` and `src/App.css`: theme tokens and responsive layout.
