@@ -4,8 +4,8 @@ import { notes } from '../lib/notes';
 export default function Writing() {
   return (
     <section id="writing" className="writing-section" aria-labelledby="writing-title">
-      <div className="section-heading"><h2 id="writing-title">Notes from the workbench</h2></div>
-      <p className="writing-intro">Small things worth writing down while building.</p>
+      <div className="section-heading"><h2 id="writing-title">Thoughts</h2></div>
+      <p className="writing-intro">Random thoughts. May include personal reflections, ideas, or observations.</p>
       <div className="writing-list">
         {notes.map(note => (
           <a className="writing-link" key={note.slug} href={`#/writing/${note.slug}`}>
