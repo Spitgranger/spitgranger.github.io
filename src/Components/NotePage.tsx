@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 import Markdown from 'react-markdown';
 import { notes } from '../lib/notes';
+import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 
 export default function NotePage({ slug }: { slug: string }) {
   const note = notes.find(item => item.slug === slug);
@@ -27,7 +31,7 @@ export default function NotePage({ slug }: { slug: string }) {
         <h1 ref={heading} tabIndex={-1}>{note.title}</h1>
         <p className="note-summary">{note.summary}</p>
         {note.draft && <p className="note-draft-notice">Draft note · still being edited.</p>}
-        <div className="note-prose"><Markdown skipHtml>{note.body}</Markdown></div>
+        <div className="note-prose"><Markdown skipHtml remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]}>{note.body}</Markdown></div>
         <a className="glass-button" href="#writing">← Back to writing</a>
       </> : <>
         <h1 ref={heading} tabIndex={-1}>Note not found.</h1>
