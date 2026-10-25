@@ -102,7 +102,7 @@ $$
 $$
 \frac{J}{594} = \text{cost per week} \quad\Rightarrow\quad J = \text{cost per week} \times 594
 $$
-Where $J$ is the jackpot for that week. At $80 your cost per week would be around $6.67. That means you would require the jackpot to be worth on average $3961.98 to break even.
+Where $J$ is the jackpot for that week. At \$80 your cost per week would be around \$6.67. That means you would require the jackpot to be worth on average \$3961.98 to break even.
 
 
 ## One more thing
